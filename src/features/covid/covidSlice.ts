@@ -8,39 +8,39 @@ const apiUrl = "https://api.covid19api.com/total/country";
 type DATADAILY = typeof dataDaily;
 
 type covidState = {
-    daily:DATADAILY;
-    country:string;
+    daily: DATADAILY;
+    country: string;
 }
 
-const initialState: covidState={
-    daily:dataDaily,
-    country:"Japan",
+const initialState: covidState = {
+    daily: dataDaily,
+    country: "japan",
 }
 
 export const fetchAsyncGetDaily = createAsyncThunk(
     "covid/getDaily",
-    async (country:string)=>{
+    async (country: string) => {
         const {data} = await axios.get<DATADAILY>(`${apiUrl}/${country}`);
-        return {data:data, country};
+        return {data, country};
     }
 );
 
 const covidSlice = createSlice({
-    name:"covid",
+    name: "covid",
     initialState,
-    reducers:{},
-    extraReducers:(builder)=>{
-        builder.addCase(fetchAsyncGetDaily.fulfilled, (state,action)=>{
+    reducers: {},
+    extraReducers: (builder) => {
+        builder.addCase(fetchAsyncGetDaily.fulfilled, (state, action) => {
             return {
                 ...state,
-                daily:action.payload.data,
-                country:action.payload.country,
+                daily: action.payload.data,
+                country: action.payload.country,
             }
         })
     }
 })
 
-export const selectDaily = (state:RootState)=>state.covid.daily
-export const selectCountry = (state:RootState)=>state.covid.country
+export const selectDaily = (state: RootState) => state.covid.daily
+export const selectCountry = (state: RootState) => state.covid.country
 
 export default covidSlice.reducer;

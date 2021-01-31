@@ -1,3 +1,17 @@
 [
-  {"ID":"a710b8fa-b77e-494d-bc8a-21a015c8100b","Country":"Japan","CountryCode":"ZA","Province":"","City":"","CityCode":"","Lat":"-30.56","Lon":"22.94","Confirmed":1,"Deaths":0,"Recovered":0,"Active":1,"Date":"2020-03-06T00:00:00Z"}
+  {
+    "ID": "a710b8fa-b77e-494d-bc8a-21a015c8100b",
+    "Country": "Japan",
+    "CountryCode": "ZA",
+    "Province": "",
+    "City": "",
+    "CityCode": "",
+    "Lat": "-30.56",
+    "Lon": "22.94",
+    "Confirmed": 1,
+    "Deaths": 0,
+    "Recovered": 0,
+    "Active": 1,
+    "Date": "2020-03-06T00:00:00Z"
+  }
 ]
