@@ -40,7 +40,7 @@ const PieChart: React.FC = () => {
     />)
     return <>
         <Typography align="center" color="textSecondary" gutterBottom>
-            Mortality {mortality.toFixed(2)} [%]
+            致死率 {mortality.toFixed(2)} [%]
         </Typography>
         {pieChart}
     </>
