@@ -11,6 +11,7 @@ const Chart: React.FC = () => {
 
     const LineChart = daily.length && (
         <Line
+            height={250}
             data={{
                 labels: dates.map(date => new Date(date).toDateString()),
                 datasets: [
@@ -19,18 +20,21 @@ const Chart: React.FC = () => {
                         label: "Infected",
                         borderColor: "#3333ff",
                         showLine: false,
+                        pointRadius:1,
                     },
                     {
                         data: daily.map(data => data.Recovered),
                         label: "Recovered",
                         borderColor: "green",
                         showLine: false,
+                        pointRadius:1,
                     },
                     {
                         data: daily.map(data => data.Deaths),
                         label: "Death",
                         borderColor: "#ff3370",
                         showLine: false,
+                        pointRadius:1,
                     },
 
                 ]
