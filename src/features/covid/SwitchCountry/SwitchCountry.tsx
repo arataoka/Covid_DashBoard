@@ -28,6 +28,7 @@ const SwitchCountry: React.FC = () => {
         "new zealand",
         "sweden",
         "india",
+        "myanmar"
     ];
 
     return (
